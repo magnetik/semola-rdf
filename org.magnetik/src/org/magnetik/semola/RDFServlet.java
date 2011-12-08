@@ -28,7 +28,7 @@ public class RDFServlet extends HttpServlet {
 		outputType = req.getParameter("outputType");
 		inputType = req.getParameter("inputType");
 		
-		if ((input == null) || (input == null) || (input == null)) {
+		if ((input == null) || (outputType == null) || (inputType == null)) {
 			resp.sendError(500, "You should provide : input, inputType, outputType");
 		}
 		//TODO : check outputType
