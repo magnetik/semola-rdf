@@ -6,7 +6,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
     <servlet>
         <servlet-name>semola</servlet-name>
-        <servlet-class>semola.RDFServlet</servlet-class>
+        <servlet-class>org.magnetik.semola.RDFServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>semola</servlet-name>
