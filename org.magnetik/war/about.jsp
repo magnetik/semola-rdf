@@ -12,8 +12,8 @@
    		<li>Data:
    			<ul>
    				<li><strong>input</strong>: text to convert</li>
-   				<li><strong>inputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or"N3"</li>
-   				<li><strong>outputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or"N3"</li>
+   				<li><strong>inputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3"</li>
+   				<li><strong>outputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3"</li>
    			</ul>
    		</li>
    	</ul>
