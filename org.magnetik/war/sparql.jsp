@@ -1,6 +1,7 @@
 <jsp:include page="inc/header.jsp" />
 	<h1>A free SparQL endpoint</h1>
 	<p>Enter the input RDF file to process, then the query to execute.</p>
+	<p>This service is available for distant access. See <a href="about.jsp">about</a> page.</p>
 	    <form action="/service" method="post">
 	      <div>Input :<textarea rows="10" style="width:100%" id="input"></textarea></div>
 	      <div>Query :<textarea rows="10" style="width:100%" id="query"></textarea></div>
