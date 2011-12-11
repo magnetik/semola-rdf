@@ -5,7 +5,7 @@
    <p>The code can be found on <a href="https://github.com/magnetik/semola-rdf">github/magnetik/semola-rdf</a></p>
    
    <h1>Distant access</h1>
-   <p>All servcices are accessible by distant HTTP POST queries<p>
+   <p>All services are accessible by distant HTTP POST queries<p>
    <h2>Converter</h2>
    	<ul>
    		<li>Endpoint : <strong><a href="http://semola-rdf.appspot.com/service">http://semola-rdf.appspot.com/converter</a></strong></li>
