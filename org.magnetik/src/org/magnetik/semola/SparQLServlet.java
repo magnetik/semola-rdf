@@ -2,6 +2,8 @@ package org.magnetik.semola;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+
 import javax.servlet.http.*;
 
 /**
@@ -26,7 +28,7 @@ public class SparQLServlet extends HttpServlet {
     }
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String input, inputType, outputType, queryString, result;
+		String input, inputType, outputType, queryString, result = "";
 		
 		Model model = ModelFactory.createDefaultModel();
 		
@@ -48,8 +50,48 @@ public class SparQLServlet extends HttpServlet {
 			QueryExecution qe = QueryExecutionFactory.create(query, model);
 			ResultSet results = qe.execSelect();
 			
-			// TODO: other output style
-			result = ResultSetFormatter.asText(results);
+			if (outputType.equals("TEXT")) {
+				result = ResultSetFormatter.asText(results);
+			}
+			else {
+				OutputStream output = new OutputStream() {
+
+		            private StringBuilder string = new StringBuilder();
+
+		            @Override
+		            public void write(int b) throws IOException {
+		                this.string.append((char) b);
+		            }
+
+		            //Netbeans IDE automatically overrides this toString()
+		            public String toString() {
+		                return this.string.toString();
+		            }
+		        };
+				
+		        if (outputType.equals("JSON")) {
+		        	ResultSetFormatter.outputAsJSON(output, results);
+		        }
+		        else if (outputType.equals("RDF-TURTLE")) {
+		        	ResultSetFormatter.outputAsRDF(output, "TURTLE", results);
+		        }
+		        else if (outputType.equals("RDF-XML")) {
+		        	ResultSetFormatter.outputAsRDF(output, "RDF/XML", results);
+		        }
+		        else if (outputType.equals("RDF-N3")) {
+		        	ResultSetFormatter.outputAsRDF(output, "N3", results);
+		        }
+		        else if (outputType.equals("RDF-TRIPLES")) {
+		        	ResultSetFormatter.outputAsRDF(output, "N-TRIPLE", results);
+		        }
+		        else if (outputType.equals("XML")) {
+		        	ResultSetFormatter.outputAsXML(output, results);
+		        }
+		        else if (outputType.equals("CSV")) {
+		        	ResultSetFormatter.outputAsCSV(output, results);
+		        }
+		        result = output.toString();
+			}
 			
 			// Writing output
 			resp.getWriter().println(result);
