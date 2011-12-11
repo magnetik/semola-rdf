@@ -1,10 +1,11 @@
 <jsp:include page="inc/header.jsp" />
-
-	    <form action="/service" method="post">
-	      <div><textarea rows="10" style="width:100%" id="input"></textarea></div>
-	      <div><textarea rows="10" style="width:100%" id="output"></textarea></div>
-	      <div>Convert from <select id="inputType"><option>RDF/XML</option><option>N-TRIPLE</option><option>N3</option><option>TURTLE</option></select> to <select id="ouputType"><option>RDF/XML</option><option>N-TRIPLE</option><option>N3</option><option>TURTLE</option></select></div>
-	      <div><input type="button" value="Convert !" onclick="doConvert();"/></div>
-	    </form>
+	<h1>Semola RDF</h1>
+	<p>Semola RDF is a set of tools for RDF manipulation</p>
+	<p>Description of tools are below. You can access tools in the header menu.</p>
+	<h2>Converter</h2>
+	<p>Can convert N3, TURTLE, RDF/XML serialisations</p>
+	<p>Available with HTTP POST request</p>
+	<h2>SparQL</h2>
+	<p>An sparQL endpoint</p>
     
 <jsp:include page="inc/footer.jsp" />

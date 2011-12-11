@@ -17,6 +17,7 @@
 	  })();
 	
 	</script>
+	<title>Semola RDF: Free RDF Tools</title>
   </head>
 
   <body>
@@ -26,6 +27,8 @@
 	
 	<div><ul class="navbar">
 			 <li><a href="/" class="nav">Index</a></li>
+			 <li><a href="converter.jsp" class="nav">Converter</a></li>
+			 <li><a href="sparql.jsp" class="nav">SparQL</a></li>
 			 <li><a href="about.jsp" class="nav">About</a></li>
 	</ul></div>
 	

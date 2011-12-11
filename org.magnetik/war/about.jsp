@@ -7,13 +7,13 @@
    <h1>Distant access</h1>
    <p>The service is available by distant HTTP POST queries<p>
    	<ul>
-   		<li>Endpoint : <strong><a href="http://semola-rdf.appspot.com/service">http://semola-rdf.appspot.com/service</a></strong></li>
+   		<li>Endpoint : <strong><a href="http://semola-rdf.appspot.com/service">http://semola-rdf.appspot.com/converter</a></strong></li>
    		<li>Method: <strong>POST</strong></li>
    		<li>Data:
    			<ul>
    				<li><strong>input</strong>: text to convert</li>
-   				<li><strong>inputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3"</li>
-   				<li><strong>outputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3"</li>
+   				<li><strong>inputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3".</li>
+   				<li><strong>outputType</strong>: one of "RDF/XML", "N-TRIPLE", "TURTLE" or "N3".</li>
    			</ul>
    		</li>
    	</ul>

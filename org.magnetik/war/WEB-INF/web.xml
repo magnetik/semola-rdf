@@ -5,12 +5,20 @@
 
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
     <servlet>
-        <servlet-name>semola</servlet-name>
-        <servlet-class>org.magnetik.semola.RDFServlet</servlet-class>
+        <servlet-name>converter</servlet-name>
+        <servlet-class>org.magnetik.semola.ConverterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>semola</servlet-name>
-        <url-pattern>/service</url-pattern>
+        <servlet-name>converter</servlet-name>
+        <url-pattern>/converter</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>sparql</servlet-name>
+        <servlet-class>org.magnetik.semola.SparQLServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sparql</servlet-name>
+        <url-pattern>/sparql</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
