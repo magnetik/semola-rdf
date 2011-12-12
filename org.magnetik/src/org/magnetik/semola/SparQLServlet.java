@@ -23,8 +23,7 @@ public class SparQLServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
-        resp.setContentType("text/plain");
-        resp.getWriter().println("Nothing to see here");
+		resp.sendError(405);
     }
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
